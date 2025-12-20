@@ -72,6 +72,41 @@ const projects = [
     img: pro8,
     liveDemo: "https://dev-amna.github.io/Calculator-app/",
     code: "https://github.com/Dev-Amna/Calculator-app",
+  },{
+    id: 8,
+    status: "Js",
+    name: "Calculator-app",
+    img: pro8,
+    liveDemo: "https://dev-amna.github.io/Calculator-app/",
+    code: "https://github.com/Dev-Amna/Calculator-app",
+  },{
+    id: 9,
+    status: "Js",
+    name: "Calculator-app",
+    img: pro8,
+    liveDemo: "https://dev-amna.github.io/Calculator-app/",
+    code: "https://github.com/Dev-Amna/Calculator-app",
+  },{
+    id: 10,
+    status: "Js",
+    name: "Calculator-app",
+    img: pro8,
+    liveDemo: "https://dev-amna.github.io/Calculator-app/",
+    code: "https://github.com/Dev-Amna/Calculator-app",
+  },{
+    id: 11,
+    status: "Js",
+    name: "Calculator-app",
+    img: pro8,
+    liveDemo: "https://dev-amna.github.io/Calculator-app/",
+    code: "https://github.com/Dev-Amna/Calculator-app",
+  },{
+    id: 12,
+    status: "Js",
+    name: "Calculator-app",
+    img: pro8,
+    liveDemo: "https://dev-amna.github.io/Calculator-app/",
+    code: "https://github.com/Dev-Amna/Calculator-app",
   },
 ];
 
