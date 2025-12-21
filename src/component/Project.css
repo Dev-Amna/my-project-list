@@ -8,7 +8,7 @@ body {
 
 /* Title */
 .project-title {
-  display: block;
+  display: inline-block;
   font-size: 4rem;
   font-weight: 900;
   color: #ffffff;
