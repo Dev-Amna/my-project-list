@@ -1,20 +1,27 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Data from "../data/data";
 import "./Project.css";
 
 function Projects() {
-  // Optional: Initialize particles.js
   useEffect(() => {
     if (window.particlesJS) {
       window.particlesJS("particles-js", {
         particles: {
-          number: { value: 50, density: { enable: true, value_area: 800 } },
+          number: {
+            value: 50,
+            density: { enable: true, value_area: 800 }
+          },
           color: { value: "#ffffff" },
           shape: { type: "circle" },
           opacity: { value: 0.3, random: true },
           size: { value: 3, random: true },
           line_linked: { enable: false },
-          move: { enable: true, speed: 1, direction: "none", random: true }
+          move: {
+            enable: true,
+            speed: 1,
+            direction: "none",
+            random: true
+          }
         }
       });
     }
@@ -22,27 +29,25 @@ function Projects() {
 
   return (
     <section id="project" className="project-section">
-      {/* Optional particles background */}
-      <div id="particles-js" style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: 0,
-        pointerEvents: 'none'
-      }} />
-      
-      <h1 className="project-title">
-        My Projects
-      </h1>
+      {/* particles background */}
+      <div
+        id="particles-js"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 0,
+          pointerEvents: "none"
+        }}
+      />
+
+      <h1 className="project-title">My Projects</h1>
 
       <div className="project-list">
         {Data.map((project, index) => (
-          <div
-            className="project-card"
-            key={index}
-          >
+          <div className="project-card" key={index}>
             <div className="card-image">
               <img src={project.img} alt="Project Preview" />
             </div>
@@ -56,6 +61,7 @@ function Projects() {
               >
                 Live Demo
               </a>
+
               <a
                 href={project.code}
                 target="_blank"

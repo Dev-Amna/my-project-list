@@ -1,4 +1,4 @@
-import React from "react";
+
 import Projects from "./component/Projects";
 
 function App() {
