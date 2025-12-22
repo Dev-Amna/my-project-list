@@ -5,6 +5,17 @@ body {
   background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
   font-family: 'Segoe UI', sans-serif;
 }
+.project-section {
+  position: relative;
+  z-index: 1;
+}
+
+.particles-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
 
 /* Title */
 .project-title {

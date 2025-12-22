@@ -1,47 +1,11 @@
-import { useEffect } from "react";
+import React from "react";
 import Data from "../data/data";
 import "./Project.css";
 
 function Projects() {
-  useEffect(() => {
-    if (window.particlesJS) {
-      window.particlesJS("particles-js", {
-        particles: {
-          number: {
-            value: 50,
-            density: { enable: true, value_area: 800 }
-          },
-          color: { value: "#ffffff" },
-          shape: { type: "circle" },
-          opacity: { value: 0.3, random: true },
-          size: { value: 3, random: true },
-          line_linked: { enable: false },
-          move: {
-            enable: true,
-            speed: 1,
-            direction: "none",
-            random: true
-          }
-        }
-      });
-    }
-  }, []);
-
   return (
     <section id="project" className="project-section">
-      {/* particles background */}
-      <div
-        id="particles-js"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: 0,
-          pointerEvents: "none"
-        }}
-      />
+      <div id="particles-js" className="particles-bg"></div>
 
       <h1 className="project-title">My Projects</h1>
 
@@ -61,7 +25,6 @@ function Projects() {
               >
                 Live Demo
               </a>
-
               <a
                 href={project.code}
                 target="_blank"
