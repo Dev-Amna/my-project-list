@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Data from "../data/data";
@@ -7,19 +7,21 @@ import "./Project.css";
 gsap.registerPlugin(ScrollTrigger);
 
 function Projects() {
-  const sectionRef = useRef(null);
-  const titleRef = useRef(null);
-  const cardsRef = useRef([]);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const cardsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
 
     // TITLE ANIMATION
-    gsap.fromTo(
-      titleRef.current,
-      { y: -50, opacity: 0, scale: 0.95 },
-      { y: 0, opacity: 1, scale: 1, duration: 1.5, ease: "power3.out" }
-    );
+    if (titleRef.current) {
+      gsap.fromTo(
+        titleRef.current,
+        { y: -50, opacity: 0, scale: 0.95 },
+        { y: 0, opacity: 1, scale: 1, duration: 1.5, ease: "power3.out" }
+      );
+    }
 
     // CARDS SCROLL ANIMATION
     cardsRef.current.forEach((card, i) => {
@@ -50,7 +52,7 @@ function Projects() {
         const rotateX = gsap.quickTo(card, "rotateX", { duration: 0.4, ease: "power3.out" });
         const rotateY = gsap.quickTo(card, "rotateY", { duration: 0.4, ease: "power3.out" });
 
-        card.addEventListener("mousemove", (e) => {
+        card.addEventListener("mousemove", (e: MouseEvent) => {
           const rect = card.getBoundingClientRect();
           rotateY(((e.clientX - rect.left) / rect.width - 0.5) * 15);
           rotateX(-((e.clientY - rect.top) / rect.height - 0.5) * 15);
@@ -64,8 +66,8 @@ function Projects() {
         });
 
         // MAGNETIC BUTTONS
-        card.querySelectorAll(".btn").forEach((btn) => {
-          btn.addEventListener("mousemove", (e) => {
+        card.querySelectorAll<HTMLAnchorElement>(".btn").forEach((btn) => {
+          btn.addEventListener("mousemove", (e: MouseEvent) => {
             const r = btn.getBoundingClientRect();
             const x = e.clientX - r.left - r.width / 2;
             const y = e.clientY - r.top - r.height / 2;
@@ -88,7 +90,9 @@ function Projects() {
           <div
             className="project-card"
             key={index}
-            ref={(el) => (cardsRef.current[index] = el)}
+            ref={(el) => {
+              if (el) cardsRef.current[index] = el;
+            }}
           >
             <div className="card-image">
               <img src={project.img} alt="Project Preview" />
