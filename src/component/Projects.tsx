@@ -12,6 +12,7 @@ function Projects() {
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
+    
     const isMobile = window.innerWidth < 768;
 
     // TITLE ANIMATION
@@ -81,6 +82,7 @@ function Projects() {
 
   return (
     <section id="project" className="project-section" ref={sectionRef}>
+      
       <h1 className="project-title" ref={titleRef}>
         My Projects
       </h1>
