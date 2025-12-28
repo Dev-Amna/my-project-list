@@ -14,7 +14,7 @@ function Projects() {
     filter === "all" ? true : p.status.toLowerCase().includes(filter)
   );
 
-  /* ---------- TITLE (ONCE) ---------- */
+  /* ---------- TITLE ANIMATION (ONCE) ---------- */
   useLayoutEffect(() => {
     gsap.from(titleRef.current, {
       opacity: 0,
@@ -24,15 +24,11 @@ function Projects() {
     });
   }, []);
 
-  /* ---------- CARDS (EVERY FILTER CHANGE) ---------- */
+  /* ---------- CARDS ANIMATION (EVERY FILTER CHANGE) ---------- */
   useLayoutEffect(() => {
     gsap.fromTo(
       cardsRef.current,
-      {
-        opacity: 0,
-        y: 40,
-        scale: 0.95,
-      },
+      { opacity: 0, y: 40, scale: 0.95 },
       {
         opacity: 1,
         y: 0,
@@ -67,7 +63,9 @@ function Projects() {
           <div
             key={project.id ?? i}
             className="project-card"
-            ref={(el) => el && (cardsRef.current[i] = el)}
+            ref={(el) => {
+              if (el) cardsRef.current[i] = el;
+            }}
           >
             <div className="card-image">
               {project.img ? (
