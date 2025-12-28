@@ -29,14 +29,7 @@ function Projects() {
     gsap.fromTo(
       cardsRef.current,
       { opacity: 0, y: 40, scale: 0.95 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.6,
-        stagger: 0.12,
-        ease: "power3.out",
-      }
+      { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.12, ease: "power3.out" }
     );
   }, [filter]);
 
@@ -77,10 +70,20 @@ function Projects() {
 
             {project.liveDemo && project.code && (
               <div className="card-buttons">
-                <a href={project.liveDemo} className="btn live-btn">
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn live-btn"
+                >
                   Live Demo
                 </a>
-                <a href={project.code} className="btn code-btn">
+                <a
+                  href={project.code}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn code-btn"
+                >
                   View Code
                 </a>
               </div>
