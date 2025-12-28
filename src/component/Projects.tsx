@@ -1,44 +1,108 @@
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Data from "../data/data";
 import "./Project.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Projects() {
   const [filter, setFilter] = useState<"all" | "html" | "js" | "react">("all");
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const titleRef = useRef<HTMLHeadingElement | null>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const filterBtnsRef = useRef<HTMLButtonElement[]>([]);
 
-  // Filtered projects
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  }, []);
+
   const filteredProjects = Data.filter((project) => {
     if (filter === "all") return true;
     return project.status.toLowerCase().includes(filter);
   });
 
-  // Reset card refs whenever filter changes
-  useEffect(() => {
+  useLayoutEffect(() => {
     cardsRef.current = [];
-  }, [filter]);
+    ScrollTrigger.getAll().forEach((st) => st.kill());
 
-  // Animate cards
-  const animateCards = () => {
-    const isMobile = window.innerWidth < 768;
+    // Title animation
+    if (titleRef.current) {
+      gsap.fromTo(
+        titleRef.current,
+        { y: -100, opacity: 0, scale: 0.9 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: { trigger: titleRef.current, start: "top 90%" },
+        }
+      );
+    }
 
+    // Filter buttons animation
+    filterBtnsRef.current.forEach((btn, i) => {
+      gsap.fromTo(
+        btn,
+        { y: -20, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          delay: i * 0.05,
+          ease: "power3.out",
+          scrollTrigger: { trigger: btn, start: "top 95%" },
+        }
+      );
+    });
+
+    // Cards animation - WOW EFFECT
     cardsRef.current.forEach((card, i) => {
       if (!card) return;
 
-      // Fade-in animation for filter click
       gsap.fromTo(
         card,
-        { opacity: 0, y: 50, scale: 0.95 },
-        { opacity: 1, y: 0, scale: 1, duration: 0.8, delay: i * 0.1, ease: "power3.out" }
+        { opacity: 0, y: 120, x: i % 2 === 0 ? -60 : 60, rotation: i % 2 === 0 ? -5 : 5, scale: 0.9 },
+        {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          rotation: 0,
+          scale: 1,
+          duration: 1.2,
+          delay: i * 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            end: "top 50%",
+            scrub: 0.6,
+            toggleActions: "play none none reverse",
+          },
+        }
       );
 
-      if (!isMobile) {
-        // 3D Hover Tilt
+      // Subtle parallax while scrolling
+      gsap.to(card, {
+        y: 20,
+        rotation: i % 2 === 0 ? 2 : -2,
+        scrollTrigger: {
+          trigger: card,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.5,
+        },
+      });
+
+      // Desktop 3D tilt + magnetic buttons
+      if (window.innerWidth >= 768) {
         const rotateX = gsap.quickTo(card, "rotateX", { duration: 0.4, ease: "power3.out" });
         const rotateY = gsap.quickTo(card, "rotateY", { duration: 0.4, ease: "power3.out" });
 
@@ -55,7 +119,7 @@ function Projects() {
           gsap.to(card, { scale: 1, duration: 0.4 });
         });
 
-        // Magnetic Buttons
+        // Magnetic buttons
         card.querySelectorAll<HTMLAnchorElement>(".btn").forEach((btn) => {
           btn.addEventListener("mousemove", (e: MouseEvent) => {
             const r = btn.getBoundingClientRect();
@@ -67,36 +131,30 @@ function Projects() {
         });
       }
     });
-  };
 
-  // Animate on initial load and whenever filter changes
-  useEffect(() => {
-    // TITLE ANIMATION
-    if (titleRef.current) {
-      gsap.fromTo(
-        titleRef.current,
-        { y: -50, opacity: 0, scale: 0.95 },
-        { y: 0, opacity: 1, scale: 1, duration: 1.5, ease: "power3.out" }
-      );
-    }
-
-    // Animate cards after a short delay to ensure refs are updated
-    setTimeout(() => {
-      animateCards();
-    }, 50);
-  }, [filter]);
+    // Background floating blobs parallax
+    gsap.to("body::before", {
+      y: 80,
+      x: 80,
+      scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: 0.5 },
+    });
+    gsap.to("body::after", {
+      y: -80,
+      x: -80,
+      scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: 0.5 },
+    });
+  }, [filter, filteredProjects]);
 
   return (
-    <section id="project" className="project-section" ref={sectionRef}>
-      <h1 className="project-title" ref={titleRef}>
-        My Projects
-      </h1>
+    <section id="project" className="project-section">
+      <h1 className="project-title" ref={titleRef}>My Projects</h1>
 
       <div className="project-filters">
-        {["all", "html", "js", "react"].map((item) => (
+        {["all", "html", "js", "react"].map((item, i) => (
           <button
             key={item}
             className={`filter-btn ${filter === item ? "active" : ""}`}
+            ref={(el) => el && (filterBtnsRef.current[i] = el)}
             onClick={() => setFilter(item as any)}
           >
             {item === "all" ? "All" : item.toUpperCase()}
@@ -105,34 +163,29 @@ function Projects() {
       </div>
 
       <div className="project-list">
-        {filteredProjects.map((project, index) => (
-          <div
-            className="project-card"
-            key={`${filter}-${index}`} // force re-render on filter change
-            ref={(el) => {
-              if (el) cardsRef.current[index] = el;
-            }}
-          >
+       {filteredProjects.map((project, index) => (
+  <div
+    className="project-card"
+    key={`${filter}-${index}`}
+    ref={(el) => el && (cardsRef.current[index] = el)}
+    data-aos="fade-up"
+    data-aos-delay={index * 150} // stagger effect: each card delayed by 150ms
+  >
+
             <div className="card-image">
               {project.img ? (
                 <img src={project.img} alt={project.name} />
               ) : (
-                <div className="coming-soon">
-                  <h3>{project.name}</h3>
-                </div>
+                <div className="coming-soon"><h3>{project.name}</h3></div>
               )}
             </div>
 
-            {project.liveDemo && project.code ? (
+            {project.liveDemo && project.code && (
               <div className="card-buttons">
-                <a href={project.liveDemo} target="_blank" rel="noreferrer" className="btn live-btn">
-                  Live Demo
-                </a>
-                <a href={project.code} target="_blank" rel="noreferrer" className="btn code-btn">
-                  View Code
-                </a>
+                <a href={project.liveDemo} target="_blank" rel="noreferrer" className="btn live-btn">Live Demo</a>
+                <a href={project.code} target="_blank" rel="noreferrer" className="btn code-btn">View Code</a>
               </div>
-            ) : null}
+            )}
           </div>
         ))}
       </div>
