@@ -45,7 +45,7 @@ const projects = [
     status: "js",
     name: "Age-calculator",
     img: project1,
-    liveDemo: "https://dev-amna.github.io/Age-calculator-app/",
+    liveDemo: "https://amna-coder404.github.io/Age-calculator-app/",
     code: "https://github.com/Dev-Amna/Age-calculator-app",
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     status: "js",
     name: "Calculator",
     img: project2,
-    liveDemo: "https://dev-amna.github.io/Calculator-app/",
+    liveDemo: "https://amna-coder404.github.io/Calculator-app/",
     code: "https://github.com/Dev-Amna/Calculator-app",
   },
   {
@@ -61,7 +61,7 @@ const projects = [
     status: "js",
     name: "Interactive card details form",
     img: project3,
-    liveDemo: "https://dev-amna.github.io/Interactive-card-details-form/",
+    liveDemo: "https://amna-coder404.github.io/Interactive-card-details-form/",
     code: "https://github.com/Dev-Amna/Interactive-card-details-form",
   },
   {
@@ -69,7 +69,7 @@ const projects = [
     status: "react, vite",
     name: "Agency landing page",
     img: project4,
-    liveDemo: "https://agency-landing-page-ombk.vercel.app/",
+    liveDemo: "https://agency-landing-page-chi-two.vercel.app/",
     code: "https://github.com/Dev-Amna/Agency-landing-page",
   },
   {
@@ -78,7 +78,7 @@ const projects = [
     name: "REST Countries API with color theme switcher",
     img: project5,
     liveDemo:
-      "https://dev-amna.github.io/REST-Countries-API-with-color-theme-switcher/",
+      "https://amna-coder404.github.io/REST-Countries-API-with-color-theme-switcher/",
     code: "https://github.com/Dev-Amna/REST-Countries-API-with-color-theme-switcher",
   },
   {
@@ -86,7 +86,7 @@ const projects = [
     status: "js",
     name: "Rocks-Paper-Scissors",
     img: project6,
-    liveDemo: "https://dev-amna.github.io/Rocks-Paper-Scissors-/",
+    liveDemo: "https://amna-coder404.github.io/Rocks-Paper-Scissors-/",
     code: "https://github.com/Dev-Amna/Rocks-Paper-Scissors-",
   },
   {
@@ -94,7 +94,7 @@ const projects = [
     status: "js",
     name: "Simon-Says-Game",
     img: project7,
-    liveDemo: "https://dev-amna.github.io/Simon-Says-Game/",
+    liveDemo: "https://amna-coder404.github.io/Simon-Says-Game/",
     code: "https://github.com/Dev-Amna/Simon-Says-Game",
   },
   {
@@ -102,7 +102,7 @@ const projects = [
     status: "html, css, js",
     name: "Contact form",
     img: project8,
-    liveDemo: "https://dev-amna.github.io/Contact-form/",
+    liveDemo: "https:/amna-coder404.github.io/Contact-form/",
     code: "https://github.com/Dev-Amna/Contact-form",
   },
   {
@@ -110,7 +110,7 @@ const projects = [
     status: "html, css, js",
     name: "Todo-app",
     img: project9,
-    liveDemo: "https://dev-amna.github.io/Todo--App/",
+    liveDemo: "https://amna-coder404.github.io/Todo--App/",
     code: "https://github.com/Dev-Amna/Todo--App",
   },
   {
@@ -126,7 +126,7 @@ const projects = [
     status: "js",
     name: "Launch countdown timer",
     img: project11,
-    liveDemo: "https://dev-amna.github.io/Launch-countdown-timer/",
+    liveDemo: "https://amna-coder404.github.io/Launch-countdown-timer/",
     code: "https://github.com/Dev-Amna/Launch-countdown-timer",
   },
   {
@@ -134,7 +134,7 @@ const projects = [
     status: "html, css, js",
     name: "Pricing component with toggle",
     img: project12,
-    liveDemo: "https://dev-amna.github.io/Pricing-component-with-toggle/",
+    liveDemo: "https://amna-coder404.github.io/Pricing-component-with-toggle/",
     code: "https://github.com/Dev-Amna/Pricing-component-with-toggle",
   },
   {
@@ -142,7 +142,7 @@ const projects = [
     status: "html, css, js",
     name: "Coding bootcamp testimonials slider",
     img: project13,
-    liveDemo: "https://dev-amna.github.io/Coding-bootcamp-testimonials-slider/",
+    liveDemo: "https://amna-coder404.github.io/Coding-bootcamp-testimonials-slider/",
     code: "https://github.com/Dev-Amna/Coding-bootcamp-testimonials-slider",
   },
   {
@@ -151,7 +151,7 @@ const projects = [
     name: "Social media dashboard with theme switcher",
     img: project14,
     liveDemo:
-      "https://dev-amna.github.io/Social-media-dashboard-with-theme-switcher/",
+      "https://amna-coder404.github.io/Social-media-dashboard-with-theme-switcher/",
     code: "https://github.com/Dev-Amna/Social-media-dashboard-with-theme-switcher",
   },
   {
@@ -160,7 +160,7 @@ const projects = [
     name: "Newsletter sign-up form with success message",
     img: project15,
     liveDemo:
-      "https://dev-amna.github.io/Newsletter-sign-up-form-with-success-message/",
+      "https://amna-coder404.github.io/Newsletter-sign-up-form-with-success-message/",
     code: "https://github.com/Dev-Amna/Newsletter-sign-up-form-with-success-message",
   },
   {
@@ -168,7 +168,7 @@ const projects = [
     status: "js",
     name: "Time-tracking-dashboard",
     img: project16,
-    liveDemo: "https://dev-amna.github.io/Time-tracking-dashboard/",
+    liveDemo: "https://amna-coder404.github.io/Time-tracking-dashboard/",
     code: "https://github.com/Dev-Amna/Time-tracking-dashboard",
   },
   {
@@ -176,7 +176,7 @@ const projects = [
     status: "html, css",
     name: "Article-preview-component",
     img: project17,
-    liveDemo: "https://dev-amna.github.io/Article-preview-component/",
+    liveDemo: "https://amna-coder404.github.io/Article-preview-component/",
     code: "https://github.com/Dev-Amna/Article-preview-component",
   },
   {
@@ -184,7 +184,7 @@ const projects = [
     status: "html, css, js",
     name: "Base Apparel coming soon page",
     img: project18,
-    liveDemo: "https://dev-amna.github.io/Base-Apparel-coming-soon-page/",
+    liveDemo: "https://amna-coder404.github.io/Base-Apparel-coming-soon-page/",
     code: "https://github.com/Dev-Amna/Base-Apparel-coming-soon-page",
   },
   {
@@ -192,7 +192,7 @@ const projects = [
     status: "html, css, js",
     name: "FAQ accordion card",
     img: project19,
-    liveDemo: "https://dev-amna.github.io/FAQ-accordion/",
+    liveDemo: "https://amna-coder404.github.io/FAQ-accordion/",
     code: "https://github.com/Dev-Amna/FAQ-accordion",
   },
   {
@@ -200,7 +200,7 @@ const projects = [
     status: "html, css",
     name: "Four-card-feature-section",
     img: project20,
-    liveDemo: "https://dev-amna.github.io/Four-card-feature-section-/",
+    liveDemo: "https://amna-coder404.github.io/Four-card-feature-section-/",
     code: "https://github.com/Dev-Amna/Four-card-feature-section-",
   },
   {
@@ -208,7 +208,7 @@ const projects = [
     status: "html, css",
     name: "Chat App CSS Illustration",
     img: project21,
-    liveDemo: "https://dev-amna.github.io/Chat-App-CSS-Illustration/",
+    liveDemo: "https://amna-coder404github.io/Chat-App-CSS-Illustration/",
     code: "https://github.com/Dev-Amna/Chat-App-CSS-Illustration",
   },
   {
@@ -216,7 +216,7 @@ const projects = [
     status: "html, css, js",
     name: "Interactive rating component",
     img: project22,
-    liveDemo: "https://dev-amna.github.io/Interactive-rating-component/",
+    liveDemo: "https://amna-coder404.github.io/Interactive-rating-component/",
     code: "https://github.com/Dev-Amna/Interactive-rating-component",
   },
   {
@@ -224,7 +224,7 @@ const projects = [
     status: "html, css, js",
     name: "3 column preview card component",
     img: project23,
-    liveDemo: "https://dev-amna.github.io/3-column-preview-card-component/",
+    liveDemo: "https://amna-coder404.github.io/3-column-preview-card-component/",
     code: "https://github.com/Dev-Amna/3-column-preview-card-component",
   },
   {
@@ -232,7 +232,7 @@ const projects = [
     status: "html, css",
     name: "Social proof section",
     img: project24,
-    liveDemo: "https://dev-amna.github.io/Social-proof-section/",
+    liveDemo: "https://amna-coder404.github.io/Social-proof-section/",
     code: "https://github.com/Dev-Amna/Social-proof-section",
   },
   {
@@ -240,7 +240,7 @@ const projects = [
     status: "html, css, js",
     name: "Multi-step form",
     img: project25,
-    liveDemo: "https://dev-amna.github.io/-Multi-step-form/",
+    liveDemo: "https://amna-coder404.github.io/-Multi-step-form/",
     code: "https://github.com/Dev-Amna/-Multi-step-form",
   },
   {
@@ -248,7 +248,7 @@ const projects = [
     status: "html, css, js",
     name: "Browser-Extensions-Manager",
     img: project26,
-    liveDemo: "https://dev-amna.github.io/Browser-Extensions-Manager/",
+    liveDemo: "https://amna-coder404.github.io/Browser-Extensions-Manager/",
     code: "https://github.com/Dev-Amna/Browser-Extensions-Manager",
   },
   {
@@ -256,7 +256,7 @@ const projects = [
     status: "html, css, js, api",
     name: "Advice generator app",
     img: project27,
-    liveDemo: "https://dev-amna.github.io/Advice-generator-app/",
+    liveDemo: "https://amna-coder404.github.io/Advice-generator-app/",
     code: "https://github.com/Dev-Amna/Advice-generator-app",
   },
   {
@@ -264,7 +264,7 @@ const projects = [
     status: "html, css",
     name: "Recipe-page",
     img: project28,
-    liveDemo: "https://dev-amna.github.io/Recipe-page/",
+    liveDemo: "https://amna-coder404.github.io/Recipe-page/",
     code: "https://github.com/Dev-Amna/Recipe-page",
   },
   {
@@ -272,7 +272,7 @@ const projects = [
     status: "html, css",
     name: "Testimonials grid section",
     img: project29,
-    liveDemo: "https://dev-amna.github.io/Testimonials-grid-section/",
+    liveDemo: "https://amna-coder404.github.io/Testimonials-grid-section/",
     code: "https://github.com/Dev-Amna/Testimonials-grid-section",
   },
   {
@@ -280,7 +280,7 @@ const projects = [
     status: "html, css",
     name: "Stats preview card component",
     img: project30,
-    liveDemo: "https://dev-amna.github.io/Stats-preview-card-component/",
+    liveDemo: "https://amna-coder404.github.io/Stats-preview-card-component/",
     code: "https://github.com/Dev-Amna/Stats-preview-card-component",
   },
   {
@@ -288,7 +288,7 @@ const projects = [
     status: "html, css",
     name: "Order summary component",
     img: project31,
-    liveDemo: "http://dev-amna.github.io/Order-summary-component/",
+    liveDemo: "http://amna-coder404.github.io/Order-summary-component/",
     code: "https://github.com/Dev-Amna/Order-summary-component",
   },
   {
@@ -296,7 +296,7 @@ const projects = [
     status: "html, css",
     name: "Social-links-profile",
     img: project32,
-    liveDemo: "https://dev-amna.github.io/-Social-links-profile/",
+    liveDemo: "https://amna-coder404.github.io/-Social-links-profile/",
     code: "https://github.com/Dev-Amna/-Social-links-profile",
   },
   {
@@ -304,7 +304,7 @@ const projects = [
     status: "html, css",
     name: "QR code component",
     img: project33,
-    liveDemo: "https://dev-amna.github.io/QR-code-component/",
+    liveDemo: "https://amna-coder404.github.io/QR-code-component/",
     code: "https://github.com/Dev-Amna/QR-code-component",
   },
   {
@@ -312,7 +312,7 @@ const projects = [
     status: "html, css",
     name: "NFT-preview-card-component",
     img: project34,
-    liveDemo: "https://dev-amna.github.io/NFT-preview-card-component/",
+    liveDemo: "https://amna-coder404.github.io/NFT-preview-card-component/",
     code: "https://github.com/Dev-Amna/NFT-preview-card-component",
   },
   {
@@ -320,7 +320,7 @@ const projects = [
     status: "html, css",
     name: "Profile card component",
     img: project35,
-    liveDemo: "https://dev-amna.github.io/Profile-Card/",
+    liveDemo: "https://amna-coder404.github.io/Profile-Card/",
     code: "https://github.com/Dev-Amna/Profile-Card",
   },
   {
@@ -328,7 +328,7 @@ const projects = [
     status: "html, css",
     name: "Fylo Data Storage Component",
     img: project36,
-    liveDemo: "https://dev-amna.github.io/Fylo-Data-Storage-Component/",
+    liveDemo: "https://amna-coder404.github.io/Fylo-Data-Storage-Component/",
     code: "https://github.com/Dev-Amna/Fylo-Data-Storage-Component",
   },
   {
@@ -336,7 +336,7 @@ const projects = [
     status: "html, css",
     name: "Results summary component",
     img: project37,
-    liveDemo: "https://dev-amna.github.io/Results-Summary-Component/",
+    liveDemo: "https://amna-coder404.github.io/Results-Summary-Component/",
     code: "https://github.com/Dev-Amna/Results-Summary-Component",
   },
   {
@@ -344,7 +344,7 @@ const projects = [
     status: "html, css",
     name: "Product preview card component",
     img: project38,
-    liveDemo: "https://dev-amna.github.io/Product-preview-card-component/",
+    liveDemo: "https://amna-coder404.github.io/Product-preview-card-component/",
     code: "https://github.com/Dev-Amna/Product-preview-card-component",
   },
   {
@@ -352,7 +352,7 @@ const projects = [
     status: "html, css",
     name: "Single Price Grid Component",
     img: project39,
-    liveDemo: "https://dev-amna.github.io/Single-Price-Grid-Component/",
+    liveDemo: "https://amna-coder404.github.io/Single-Price-Grid-Component/",
     code: "https://github.com/Dev-Amna/Single-Price-Grid-Component",
   },
   {
@@ -360,7 +360,7 @@ const projects = [
     status: "html, css",
     name: "Blog preview card",
     img: project40,
-    liveDemo: "https://dev-amna.github.io/Blog-preview-card/",
+    liveDemo: "https://amna-coder404.github.io/Blog-preview-card/",
     code: "https://github.com/Dev-Amna/Blog-preview-card",
   },
   {
