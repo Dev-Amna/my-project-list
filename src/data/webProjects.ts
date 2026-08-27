@@ -39,7 +39,7 @@ import project38 from "../assets/project38.jpg";
 import project39 from "../assets/project39.jpg";
 import project40 from "../assets/project40.jpg";
 
-const projects = [
+const WebProjects = [
   {
     id: 0,
     status: "js",
@@ -363,13 +363,7 @@ const projects = [
     liveDemo: "https://amna-coder404.github.io/Blog-preview-card/",
     code: "https://github.com/Dev-Amna/Blog-preview-card",
   },
-  {
-    id: 40,
-    status: "react",
-    name: "New projects coming soon ✨",
 
-    // no img, liveDemo, code
-  },
 ];
 
-export default projects;
+export default WebProjects;
